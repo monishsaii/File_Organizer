@@ -17,7 +17,7 @@ def move_file(file):
         data[file.suffix] = folder_name
     os.makedirs(data[file.suffix], exist_ok=True)
     destination = cwd_path / data[file.suffix]
-    print(f"Moving {file.name} → {data[file.suffix]}/")
+    #print(f"Moving {file.name} → {data[file.suffix]}/")
     shutil.move(file, f"{destination}/{file.name}")
 
 cwd_path = Path(os.path.dirname(os.path.abspath(__file__)))
@@ -33,6 +33,6 @@ for i in cwd_path.iterdir():
 
     move_file(i)
 
-
+print("ORGANIZED SUCCESSFULLY !!!")
 with open(save_data, 'w') as f:
     json.dump(data, f)
