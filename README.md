@@ -13,7 +13,7 @@ Automatically organizes files into folders based on file extension.
 
 Navigate to desired folder on terminal and run
 ```bash
-python main.py ~/Downloads
+python main.py
 ```
 
 Example result:
